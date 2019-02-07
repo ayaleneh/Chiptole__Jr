@@ -2,12 +2,21 @@ public class Chiptole_Jr {
     public static int counter=1;
      static Double total_price=3.0;
     public static void main(String[] args) {
-
+        System.out.println("|----------------------------|");
+        System.out.println("|****************************|");
+        System.out.println("|***WELCOME TO THE PROGRAM***|");
+        System.out.println("|************CHIPOTLE_JR*****|");
+        System.out.println("|----------------------------|");
         for(int i=0;i<25;i++){
             Controller();
         }
 
     }
+
+
+
+
+
     public static void Controller(){
         total_price=3.0;
         System.out.println("|----------|");
@@ -23,6 +32,7 @@ public class Chiptole_Jr {
         System.out.println("QUESO: "+Queso()+" ");
         System.out.println("SOURCREAM: "+SourCream());
         System.out.println("PRICE: "+total_price);
+
         counter++;
 
     }
