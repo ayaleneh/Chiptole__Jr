@@ -1,23 +1,28 @@
 public class Chiptole_Jr {
     public static int counter=1;
+     static Double total_price=3.0;
     public static void main(String[] args) {
 
         for(int i=0;i<25;i++){
             Controller();
         }
+
     }
     public static void Controller(){
-        System.out.println("Burrito "+counter);
-        System.out.print(Race()+", ");
-        System.out.print(Meat()+", ");
-        System.out.print(Beans()+", ");
-        System.out.print(Salsa()+", ");
-        System.out.print(Veggies()+", ");
-        System.out.print(Cheese()+", ");
-        System.out.print(Guac()+", ");
-        System.out.print(Queso()+", ");
-        System.out.print(SourCream());
-        System.out.println();
+        total_price=3.0;
+        System.out.println("|----------|");
+        System.out.println("| BURRITO "+counter+"|");
+        System.out.println("|----------|");
+        System.out.println("RICE: "+Race()+"");
+        System.out.println("MEAT: "+Meat()+" ");
+        System.out.println("BEANS: "+Beans()+" ");
+        System.out.println("SALSA: "+Salsa()+"");
+        System.out.println("VEGGIES: "+Veggies()+" ");
+        System.out.println("CHEESE: "+Cheese()+" ");
+        System.out.println("GUAC: "+Guac()+" ");
+        System.out.println("QUESO: "+Queso()+" ");
+        System.out.println("SOURCREAM: "+SourCream());
+        System.out.println("PRICE: "+total_price);
         counter++;
 
     }
@@ -28,6 +33,12 @@ public class Chiptole_Jr {
         for (int i=0;i<Rice.length;i++){
             if(Random_number==i){
                 Ingredients= Rice[i];
+                if(!(Ingredients.equalsIgnoreCase("none"))){
+                    total_price=total_price+0.50;
+                }
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
        return Ingredients;
@@ -39,6 +50,12 @@ public class Chiptole_Jr {
         for (int i=0;i<Meat.length;i++){
             if(Random_number==i){
                 Ingredients= Meat[i];
+                if(!(Ingredients.equalsIgnoreCase("none"))){
+                    total_price=total_price+0.50;
+                }
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
         return Ingredients;
@@ -50,6 +67,12 @@ public class Chiptole_Jr {
         for (int i=0;i<Beans.length;i++){
             if(Random_number==i){
                 Ingredients= Beans[i];
+                if(!(Ingredients.equalsIgnoreCase("none"))){
+                    total_price=total_price+0.50;
+                }
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
         return Ingredients;
@@ -61,6 +84,16 @@ public class Chiptole_Jr {
         for (int i=0;i<Salsa.length;i++){
             if(Random_number==i){
                 Ingredients= Salsa[i];
+                if(Ingredients.equalsIgnoreCase("all")){
+                    total_price=total_price+1.50;
+                }
+                else if(!(Ingredients.equalsIgnoreCase("none"))){
+                    total_price=total_price+0.50;
+                }
+
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
         return Ingredients;
@@ -72,6 +105,16 @@ public class Chiptole_Jr {
         for (int i=0;i<Veggies.length;i++){
             if(Random_number==i){
                 Ingredients= Veggies[i];
+
+                 if(Ingredients.equalsIgnoreCase("all")){
+                    total_price=total_price+1.50;
+                }
+                else if(!(Ingredients.equalsIgnoreCase("none"))){
+                    total_price=total_price+0.50;
+                }
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
         return Ingredients;
@@ -83,6 +126,12 @@ public class Chiptole_Jr {
         for (int i=0;i<Cheese.length;i++){
             if(Random_number==i){
                 Ingredients= Cheese[i];
+                if(!(Ingredients.equalsIgnoreCase("no"))){
+                    total_price=total_price+0.50;
+                }
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
         return Ingredients;
@@ -94,6 +143,12 @@ public class Chiptole_Jr {
         for (int i=0;i<Guac.length;i++){
             if(Random_number==i){
                 Ingredients= Guac[i];
+                if(!(Ingredients.equalsIgnoreCase("no"))){
+                    total_price=total_price+0.50;
+                }
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
         return Ingredients;
@@ -105,6 +160,12 @@ public class Chiptole_Jr {
         for (int i=0;i<Queso.length;i++){
             if(Random_number==i){
                 Ingredients= Queso[i];
+                if(!(Ingredients.equalsIgnoreCase("no"))){
+                    total_price=total_price+0.50;
+                }
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
         return Ingredients;
@@ -116,6 +177,12 @@ public class Chiptole_Jr {
         for (int i=0;i<Sourcream.length;i++){
             if(Random_number==i){
                 Ingredients= Sourcream[i];
+                if(!(Ingredients.equalsIgnoreCase("no"))){
+                    total_price=total_price+0.50;
+                }
+                else{
+                    total_price=total_price+0;
+                }
             }
         }
         return Ingredients;
